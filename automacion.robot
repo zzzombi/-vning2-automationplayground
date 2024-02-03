@@ -1,23 +1,23 @@
 *** Settings ***
-Documentation   test for selenium.com # Just info text
-Library     SeleniumLibrary
+Documentation               test for selenium.com # Just info text
+Library                     SeleniumLibrary
 *** Variables ***
-${username}         Carmelitooandmoa@gamool.com
-${password}         123
-${url}              https://automationplayground.com/crm/
-${Submit}           puro
-${State}            orkanen
-${Name}             dag
-${Lastname}         fre
-${City}             abra
-${Email}            ham@sås.dagis
+${username}                 Carmelitooandmoa@gamool.com
+${password}                 123
+${url}                      https://automationplayground.com/crm/
+${Submit}                   puro
+${State}                    orkanen
+${Name}                     dag
+${Lastname}                 fre
+${City}                     abra
+${Email}                    ham@sås.dagis
 *** Test Cases ***
 Open Browser Click Login
         [Documentation]     testar öppning av webbsidan och login interface
-        [Tags]      Test open browser
+        [Tags]              Test open browser
         Open Browser        browser=Chrome
         Go To    ${url}
-        Click Link    //a[@id='SignIn']
+        Click Link          //a[@id='SignIn']
 Login with Username and Password
         [Documentation]     Testar logga in
         [Tags]   Test Login
@@ -30,7 +30,7 @@ Add customer Interface
         Click Link          //*[@id="new-customer"]
 Create customer and submit
         [Documentation]     skapar ny kund
-        [Tags]              add customer
+        [Tags]              add customer + submit
         Click Button        //*[@id="loginform"]/div/div/div/div/form/div[6]/input[1]
         Input Text          //*[@id="EmailAddress"]    ${Email}
         Input Text          //*[@id="FirstName"]       ${Name}
