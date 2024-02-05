@@ -12,4 +12,6 @@ Then Create customer by feeding in data and Submitting
         Click Button        //[@id="loginform"]/div/div/div/div/form/button
         Sleep    3s
         Close Browser
-        
+
+
+        123
